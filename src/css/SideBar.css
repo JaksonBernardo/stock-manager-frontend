@@ -1,0 +1,119 @@
+.sidebar {
+    width: 16vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: linear-gradient(180deg, #0d6efd, #004bb7);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    color: #fff;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Avatar */
+.sidebar .avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 5px;
+}
+
+.avatar-icon {
+    color: #fff;
+}
+
+.sidebar .avatar .name {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.sidebar .avatar .role {
+    font-size: 13px;
+    color: #cfd8dc;
+}
+
+/* Opções */
+.sidebar .options {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 10px;
+}
+
+.btn-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #e6e6e6;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: none;
+    background: transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.btn-option:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    transform: translateX(4px);
+}
+
+.btn-option.active {
+    background: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Footer */
+.sidebar .footer {
+    padding: 0 10px;
+}
+
+.btn-option.logout {
+    color: #ffdddd;
+    background: rgba(255, 255, 255, 0.08);
+    justify-content: flex-start;
+}
+
+.btn-option.logout:hover {
+    background: rgba(255, 0, 0, 0.15);
+    color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 1000px) {
+    .sidebar {
+        width: 22vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+        align-items: center;
+    }
+
+    .sidebar .avatar .name,
+    .sidebar .avatar .role,
+    .btn-option span {
+        display: none;
+    }
+
+    .btn-option {
+        justify-content: center;
+        padding: 12px;
+    }
+
+    .btn-option.active {
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
